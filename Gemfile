@@ -47,6 +47,13 @@ end
 gem 'resque'
 
 group :development do
+  # Use Cap 3.0 setup
   gem "capistrano", "~> 3.0.0"
   gem "capistrano-rails", "1.1.0"
+  gem "capistrano-rbenv", "2.0.0"
+
+  # Use Cap 3.1 setup
+  # gem "capistrano", "~> 3.1.0"
+  # gem "capistrano-rails", "~> 1.1.1"
+  # gem "capistrano-rbenv", "~> 2.0.1"
 end
