@@ -1,0 +1,2 @@
+capistrano-resque-test-app
+==========================
