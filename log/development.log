@@ -1,0 +1,27 @@
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-24 09:41:29 -0600
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 394ms (Views: 380.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-01-24 09:41:29 -0600
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-01-24 09:41:29 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-01-24 09:41:30 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-01-24 09:41:30 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-01-24 09:41:30 -0600
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-01-24 09:41:30 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-01-24 09:41:30 -0600
