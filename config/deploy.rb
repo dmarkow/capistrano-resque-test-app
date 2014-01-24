@@ -20,24 +20,40 @@ set :deploy_to, '/data/www/capistrano-resque-test-app'
 # set :keep_releases, 5
 
 namespace :deploy do
+  desc 'Start application'
+  task :start do
+    on roles(:app) do
+      within "/data/www/capistrano-resque-test-app/current" do
+        execute "ruby", "bin/puma -C ./config/puma.rb"
+      end
+    end
+  end
+
+  desc 'Stop application'
+  task :stop do
+    on roles(:all) do
+      within "/data/www/capistrano-resque-test-app/current" do
+        execute "ruby", "bin/pumactl -S /data/www/capistrano-resque-test-app/shared/tmp/pids/puma.state stop"
+      end
+    end
+  end
 
   desc 'Restart application'
   task :restart do
     on roles(:app), in: :sequence, wait: 5 do
-      # Your restart mechanism here, for example:
-      # execute :touch, release_path.join('tmp/restart.txt')
+      within "/data/www/capistrano-resque-test-app/current" do
+        execute "ruby", "bin/pumactl -S /data/www/capistrano-resque-test-app/shared/tmp/pids/puma.state phased-restart"
+      end
     end
   end
 
-  after :restart, :clear_cache do
-    on roles(:web), in: :groups, limit: 3, wait: 10 do
-      # Here we can do anything such as:
-      # within release_path do
-      #   execute :rake, 'cache:clear'
-      # end
+  desc 'Status'
+  task :status do
+    on roles(:app) do
+      execute "ruby", "bin/pumactl -S /data/www/capistrano-resque-test-app/shared/tmp/pids/puma.state stats"
+      exec pumactl -S #{fetch(:puma_state)} stats
     end
   end
 
   after :finishing, 'deploy:cleanup'
-
 end
