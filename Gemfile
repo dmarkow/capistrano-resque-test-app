@@ -45,7 +45,7 @@ gem 'puma'
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-gem 'resque'
+gem 'resque', "1.24.1"
 
 group :development do
   # Use Cap 3.0 setup
