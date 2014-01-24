@@ -3,6 +3,8 @@ set :repo_url, 'git@github.com:dmarkow/capistrano-resque-test-app'
 set :rbenv_type, :user
 set :rbenv_ruby, "2.1.0"
 set :deploy_to, '/data/www/capistrano-resque-test-app'
+set :format, :pretty
+set :log_level, :info
 
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }
 
@@ -14,7 +16,7 @@ set :deploy_to, '/data/www/capistrano-resque-test-app'
 # set :pty, true
 
 # set :linked_files, %w{config/database.yml}
-# set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
+set :linked_dirs, %w{log tmp/pids tmp/cache tmp/sockets}
 
 # set :default_env, { path: "/opt/ruby/bin:$PATH" }
 # set :keep_releases, 5
