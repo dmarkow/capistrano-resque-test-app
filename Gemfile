@@ -55,9 +55,9 @@ group :development do
   # gem "capistrano-rbenv", "2.0.0"
 
   # Use Cap 3.1 setup
-  gem "sshkit", github: "mbrictson/sshkit", branch: "thread-local"
+  gem "sshkit" #, github: "mbrictson/sshkit", branch: "thread-local"
   gem "capistrano", "~> 3.1.0"
   gem "capistrano-rails", "~> 1.1.1"
   gem "capistrano-rbenv", "~> 2.0.1"
-  gem "capistrano-resque", path: "/Users/dylan/dev/forks/sshingler-capistrano-resque", require: false
+  gem "capistrano-resque", github: "sshingler/capistrano-resque", require: false
 end
