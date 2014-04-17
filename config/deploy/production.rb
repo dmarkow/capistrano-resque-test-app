@@ -6,10 +6,10 @@ set :rails_env, "production"
 # Supports bulk-adding hosts to roles, the primary
 # server in each group is considered to be the first
 # unless any hosts have the primary property set.
-role :app, %w{dylan@ec2-2.petefowler.com}
-role :web, %w{dylan@ec2-2.petefowler.com}
-role :db, %w{dylan@ec2-2.petefowler.com}
-role :resque_worker, %w{dylan@ec2-2.petefowler.com}
+role :app, %w{dylan@ec2.petefowler.com}
+role :web, %w{dylan@ec2.petefowler.com}
+role :db, %w{dylan@ec2.petefowler.com}
+role :resque_worker, %w{dylan@ec2.petefowler.com}
 
 # Extended Server Syntax
 # ======================

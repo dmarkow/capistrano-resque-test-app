@@ -45,17 +45,19 @@ gem 'puma'
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-gem 'resque', "1.24.1"
+gem 'resque', "1.25.1"
 
 group :development do
   # Use Cap 3.0 setup
-  gem "capistrano", "~> 3.0.0"
-  gem "capistrano-rails", "1.1.0"
-  gem "capistrano-rbenv", "2.0.0"
-  gem "capistrano-resque", github: "sshingler/capistrano-resque", require: false
+  # gem "sshkit", "~> 1.2.0"
+  # gem "capistrano", "~> 3.0.0"
+  # gem "capistrano-rails", "1.1.0"
+  # gem "capistrano-rbenv", "2.0.0"
 
   # Use Cap 3.1 setup
-  # gem "capistrano", "~> 3.1.0"
-  # gem "capistrano-rails", "~> 1.1.1"
-  # gem "capistrano-rbenv", "~> 2.0.1"
+  gem "sshkit", github: "mbrictson/sshkit", branch: "thread-local"
+  gem "capistrano", "~> 3.1.0"
+  gem "capistrano-rails", "~> 1.1.1"
+  gem "capistrano-rbenv", "~> 2.0.1"
+  gem "capistrano-resque", path: "/Users/dylan/dev/forks/sshingler-capistrano-resque", require: false
 end

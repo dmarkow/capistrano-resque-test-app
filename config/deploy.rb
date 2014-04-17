@@ -1,18 +1,18 @@
 set :application, 'capistrano-resque-test-app'
 set :repo_url, 'git@github.com:dmarkow/capistrano-resque-test-app'
 set :rbenv_type, :user
-set :rbenv_ruby, "2.1.0"
+set :rbenv_ruby, "github-2.1"
 set :deploy_to, '/data/www/capistrano-resque-test-app'
 set :format, :pretty
 set :log_level, :info
-set :workers, { "foo" => 2, "bar" => 3}
+set :workers, { "foo" => 1, "bar" => 1}
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }
 
 # set :deploy_to, '/var/www/my_app'
 # set :scm, :git
 
-# set :format, :pretty
-# set :log_level, :debug
+set :format, :pretty
+set :log_level, :debug
 # set :pty, true
 
 # set :linked_files, %w{config/database.yml}
