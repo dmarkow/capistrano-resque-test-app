@@ -59,5 +59,6 @@ group :development do
   gem "capistrano", "~> 3.1.0"
   gem "capistrano-rails", "~> 1.1.1"
   gem "capistrano-rbenv", "~> 2.0.1"
-  gem "capistrano-resque", github: "sshingler/capistrano-resque", require: false
+  # gem "capistrano-resque", github: "sshingler/capistrano-resque", require: false
+  gem "capistrano-resque", path: "/Users/dylan/dev/oss/capistrano-resque", require: false
 end
