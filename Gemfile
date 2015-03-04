@@ -45,7 +45,7 @@ gem 'puma'
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-gem 'resque', "1.25.1"
+gem 'resque', "1.25.2"
 
 group :development do
   # Use Cap 3.0 setup
@@ -56,7 +56,7 @@ group :development do
 
   # Use Cap 3.1 setup
   gem "sshkit" #, github: "mbrictson/sshkit", branch: "thread-local"
-  gem "capistrano", "~> 3.1.0"
+  gem "capistrano", "~> 3.2.0"
   gem "capistrano-rails", "~> 1.1.1"
   gem "capistrano-rbenv", "~> 2.0.1"
   # gem "capistrano-resque", github: "sshingler/capistrano-resque", require: false

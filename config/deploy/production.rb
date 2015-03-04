@@ -1,5 +1,7 @@
 set :stage, :production
 set :rails_env, "production"
+set :stage_url, "dylan@123"
+set :resque_log_file, "log/rq.log"
 
 # Simple Role Syntax
 # ==================
